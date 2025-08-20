@@ -12,6 +12,7 @@ class Maude < Formula
   depends_on "buddy"
   depends_on "libsigsegv"
   depends_on "libtecla"
+  depends_on "yices2"
 
   def install
     system "autoreconf", "-i"
