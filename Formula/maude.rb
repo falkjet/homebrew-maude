@@ -5,11 +5,12 @@ class Maude < Formula
   sha256 "3dce4f7b42fae2430a08ab2663303d1be244792bb3cc365c58cdb2f3f7bff170"
   license "GPL-2.0"
 
-  depends_on "buddy"
-
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "make" => :build
+
+  depends_on "buddy"
+  depends_on "libtecla"
 
   def install
     system "autoreconf", "-i"

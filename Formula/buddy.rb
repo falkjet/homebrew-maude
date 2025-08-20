@@ -5,9 +5,9 @@ class Buddy < Formula
   sha256 "361a86540b459d40faef4ec85a32ff153415e6530e8e6a23b2eb5008d15384ce"
   license ""
 
-  depends_on "libtool" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "make" => :build
 
   def install
@@ -15,7 +15,7 @@ class Buddy < Formula
     system "autoreconf", "-fvi"
 
     system "./configure", "--disable-silent-rules", *std_configure_args
-    system "make install"
+    system "make", "install"
   end
 
   test do
