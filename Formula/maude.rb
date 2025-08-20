@@ -7,9 +7,12 @@ class Maude < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "bison" => :build
+  depends_on "flex" => :build
   depends_on "make" => :build
 
   depends_on "buddy"
+  depends_on "gmp"
   depends_on "libsigsegv"
   depends_on "libtecla"
   depends_on "yices2"
