@@ -10,6 +10,7 @@ class Maude < Formula
   depends_on "make" => :build
 
   depends_on "buddy"
+  depends_on "libsigsegv"
   depends_on "libtecla"
 
   def install
