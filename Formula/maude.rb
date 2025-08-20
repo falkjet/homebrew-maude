@@ -18,6 +18,9 @@ class Maude < Formula
   depends_on "yices2"
 
   def install
+    # Workaround since STATUS_* was renamed to YICES_STATUS_*
+    system "sed", "-i", "s/STATUS_/YICES_STATUS_/g", "src/Mixfix/yices2_Bindings.cc"
+
     system "autoreconf", "-i"
     system "./configure", "--disable-silent-rules",
       "--datadir=#{share}/maude", *std_configure_args
